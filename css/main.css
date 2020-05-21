@@ -9,6 +9,8 @@ body {
   height: 100%;
   overflow: hidden;
   background-color: #555555;
+  font-family: sans-serif;
+  font-size: 8pt;
 }
 
 body .desktop {
@@ -20,6 +22,22 @@ body .desktop {
   background-color: #008081;
 }
 
+body .desktop .column {
+  display: block;
+  width: 128px;
+}
+
+body .desktop .column .icon {
+  display: inline-block;
+  padding: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+body .desktop .column .icon img {
+  margin: 0 32px;
+}
+
 body .taskbar {
   position: absolute;
   left: 0;
@@ -29,20 +47,22 @@ body .taskbar {
   padding: 2px 3px;
   background-color: #c0c0c0;
   border-top: 1px solid #fdfffc;
-  font-family: sans-serif;
-  font-size: 8pt;
 }
 
 body .taskbar .button {
   display: inline-block;
   min-height: 24px;
+  min-width: 150px;
   line-height: 18px;
   padding: 2px 5px;
   background-color: #c0c0c0;
+  color: #000000;
   border-top: 1px solid #fdfffc;
   border-left: 1px solid #fdfffc;
   border-bottom: 1px solid #808080;
   border-right: 1px solid #808080;
+  -webkit-box-shadow: 1px 1px 0px black;
+          box-shadow: 1px 1px 0px black;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -59,14 +79,33 @@ body .taskbar .button {
 }
 
 body .taskbar .button.start {
-  width: 70px;
+  max-width: 70px;
+  min-width: 70px;
   background: url("../img/start_button.png");
   background-size: auto 16px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+body .taskbar .button.pressed {
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-bottom: 1px solid #fdfffc;
+  border-right: 1px solid #fdfffc;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body .taskbar .button.icon-my-computer {
+  background: url("../img/my_computer_16x16.png");
+  background-size: 16px;
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+
 body .start-menu {
+  display: none;
   position: absolute;
   height: 200px;
   width: 200px;
@@ -77,6 +116,8 @@ body .start-menu {
   border-left: 1px solid #fdfffc;
   border-bottom: 1px solid #808080;
   border-right: 1px solid #808080;
+  -webkit-box-shadow: 1px 1px 0px black;
+          box-shadow: 1px 1px 0px black;
   -webkit-box-shadow: 2px 2px 2px black;
           box-shadow: 2px 2px 2px black;
 }
