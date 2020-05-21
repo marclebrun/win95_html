@@ -6,6 +6,30 @@ $colorButtonFace: #c0c0c0;
 $colorButtonLight: #fdfffc;
 $colorButtonShadow: #808080;
 
+@mixin buttonBorders {
+    border-top: 1px solid $colorButtonLight;
+    border-left: 1px solid $colorButtonLight;
+    border-bottom: 1px solid $colorButtonShadow;
+    border-right: 1px solid $colorButtonShadow;
+}
+
+@mixin recessedBorders {
+    border-top: 1px solid $colorButtonShadow;
+    border-left: 1px solid $colorButtonShadow;
+    border-bottom: 1px solid $colorButtonLight;
+    border-right: 1px solid $colorButtonLight;
+}
+
+@mixin noSelect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -37,17 +61,16 @@ body {
         background-color: $colorButtonFace;
         border-top: 1px solid $colorButtonLight;
         font-family: sans-serif;
-        font-size: 10pt;
+        font-size: 8pt;
         
         .button {
             display: inline-block;
             min-height: $taskbarHeight - 6px;
+            line-height: $taskbarHeight - 12px;
             padding: 2px 5px;
             background-color: $colorButtonFace;
-            border-top: 1px solid $colorButtonLight;
-            border-left: 1px solid $colorButtonLight;
-            border-bottom: 1px solid $colorButtonShadow;
-            border-right: 1px solid $colorButtonShadow;
+            @include buttonBorders;
+            @include noSelect;
             cursor: default;
 
             &.start {
@@ -68,6 +91,8 @@ body {
         left: 1px;
         bottom: $taskbarHeight - 1px;
         background-color: $colorButtonFace;
+        @include buttonBorders;
         box-shadow: 2px 2px 2px black;
     }
+
 }
