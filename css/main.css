@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #555555;
+}
+
+body .desktop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 30px;
+  background-color: #008081;
+}
+
+body .taskbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  padding: 2px 3px;
+  background-color: #c0c0c0;
+  border-top: 1px solid #fdfffc;
+  font-family: sans-serif;
+  font-size: 10pt;
+}
+
+body .taskbar .button {
+  display: inline-block;
+  min-height: 24px;
+  padding: 2px 5px;
+  background-color: #c0c0c0;
+  border-top: 1px solid #fdfffc;
+  border-left: 1px solid #fdfffc;
+  border-bottom: 1px solid #808080;
+  border-right: 1px solid #808080;
+  cursor: default;
+}
+
+body .taskbar .button.start {
+  width: 70px;
+  background: url("../img/start_button.png");
+  background-size: auto 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body .start-menu {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 1px;
+  bottom: 29px;
+  background-color: #c0c0c0;
+  -webkit-box-shadow: 2px 2px 2px black;
+          box-shadow: 2px 2px 2px black;
+}
+/*# sourceMappingURL=main.css.map */

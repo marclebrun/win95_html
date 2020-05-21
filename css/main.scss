@@ -1,0 +1,73 @@
+$taskbarHeight: 30px;
+
+$colorBlank     : #555555;
+$colorDesktop   : #008081;
+$colorButtonFace: #c0c0c0;
+$colorButtonLight: #fdfffc;
+$colorButtonShadow: #808080;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    background-color: $colorBlank;
+
+    .desktop {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: $taskbarHeight;
+        background-color: $colorDesktop;
+
+    }
+    
+    .taskbar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: $taskbarHeight;
+        padding: 2px 3px;
+        background-color: $colorButtonFace;
+        border-top: 1px solid $colorButtonLight;
+        font-family: sans-serif;
+        font-size: 10pt;
+        
+        .button {
+            display: inline-block;
+            min-height: $taskbarHeight - 6px;
+            padding: 2px 5px;
+            background-color: $colorButtonFace;
+            border-top: 1px solid $colorButtonLight;
+            border-left: 1px solid $colorButtonLight;
+            border-bottom: 1px solid $colorButtonShadow;
+            border-right: 1px solid $colorButtonShadow;
+            cursor: default;
+
+            &.start {
+                width: 70px;
+                background: url('../img/start_button.png');
+                background-size: auto 16px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    .start-menu {
+        // display: none;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        left: 1px;
+        bottom: $taskbarHeight - 1px;
+        background-color: $colorButtonFace;
+        box-shadow: 2px 2px 2px black;
+    }
+}
