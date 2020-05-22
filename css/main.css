@@ -99,7 +99,15 @@ body .taskbar .button.pressed {
 body .taskbar .button.icon-my-computer {
   background: url("../img/my_computer_16x16.png");
   background-size: 16px;
-  background-position: left;
+  background-position: 2px center;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+
+body .taskbar .button.icon-control-panel {
+  background: url("../img/control_panel_16x16.png");
+  background-size: 16px;
+  background-position: 2px center;
   background-repeat: no-repeat;
   padding-left: 20px;
 }
